@@ -11,7 +11,12 @@ const init = async () => {
   server.route({
     method: 'GET',
     path: '/home',
-    handler: (_, h) => {
+    handler: (req, h) => {
+      if (req.info.remoteAddress === '127.0.0.1' // blocks IPv4
+        || req.info.remoteAddress === '::1') { // blocks IPv6
+        return h.response('You cannot make request').code(403);
+      }
+
       return h
         .response('Welcome to my home 🚣')
         .code(200);
