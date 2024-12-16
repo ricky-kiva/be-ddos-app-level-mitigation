@@ -1,0 +1,15 @@
+{
+  "name": "be-ddos-app-level-mitigation",
+  "version": "1.0.0",
+  "description": "DDOS mitigation in application level",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cybersecurity",
+    "hapi"
+  ],
+  "author": "Rickyslash",
+  "license": "ISC"
+}
